@@ -22,6 +22,7 @@ public class recursion{
      *precondition: n is non-negative
      */
     public static int fib(int n){
+      /**
       if (n > 1){
         return fib(n-1) + fib(n-2);
       }
@@ -31,12 +32,35 @@ public class recursion{
     else{
       return 0;
     }
-    
+    **/
+
+      return fibHelper(n,0,1,0);
+
+
+    }
+
+    public static int fibHelper(int n,int p, int p2,int index){
+      int second = p;
+      int first = p2;
+      if (n == 1){
+        return 1;
+      }
+      if (n == 0){
+        return 0;
+      }
+      if (n != index + 2 ){
+        return fibHelper(n,first,second + first,index + 1);
+      }
+      else{
+        return first + second;
+      }
     }
 
     /*As Per classwork*/
-  //  public static ArrayList<Integer> makeAllSums(){
-  //  }
+    //public static ArrayList<Integer> makeAllSums(int n){
+      //ArrayList<Integer> ans = new ArrayList<>();
+      //ArrayListHelper(ans,n);
+    //}
   public static void main(String args[]){
     System.out.println(sqrt(1,.001));
     System.out.println(sqrt(4,.00001));
