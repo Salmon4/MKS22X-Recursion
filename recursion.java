@@ -21,9 +21,18 @@ public class recursion{
      *fib(0) = 1; fib(1) = 1; fib(5) = 5
      *precondition: n is non-negative
      */
-    //public static int fib(int n){
-
-  //  }
+    public static int fib(int n){
+      if (n > 1){
+        return fib(n-1) + fib(n-2);
+      }
+      if (n == 1){
+      return 1;
+    }
+    else{
+      return 0;
+    }
+    
+    }
 
     /*As Per classwork*/
   //  public static ArrayList<Integer> makeAllSums(){
@@ -33,5 +42,10 @@ public class recursion{
     System.out.println(sqrt(4,.00001));
     System.out.println(sqrt(64,.1));
     System.out.println(sqrt(1000,.0001));
+
+    System.out.println(fib(0));
+    System.out.println(fib(1));
+    System.out.println(fib(5));
+    System.out.println(fib(25));
   }
 }
