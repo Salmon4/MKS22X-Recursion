@@ -91,6 +91,12 @@ public class recursion{
     System.out.println(fib(30));
     System.out.println("Suppose to print 701408733");
     System.out.println(fib(44));
+    System.out.println("Suppose to print 1134903170");
+    System.out.println(fib(45));
+    System.out.println("Suppose to print 1836311903");
+    System.out.println(fib(46));
+    System.out.println("Suppose to print 2971215073");
+    System.out.println(fib(47));
 
 
     System.out.println(makeAllSums(3).toString());
