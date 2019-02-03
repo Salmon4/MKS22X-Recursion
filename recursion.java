@@ -60,7 +60,7 @@ public class recursion{
     }
 
   public static void main(String args[]){
-    System.out.println("Square Root Test:");
+    System.out.println("Square Root Tests:");
     System.out.println("Suppose to print about 1");
     System.out.println(sqrt(1,.001));
     System.out.println("Suppose to print about 2");
@@ -76,13 +76,22 @@ public class recursion{
 
     System.out.println("");
 
-    System.out.println("")
+    System.out.println("Fib Tests:");
+    System.out.println("Suppose to print 0");
     System.out.println(fib(0));
+    System.out.println("Suppose to print 1");
     System.out.println(fib(1));
+    System.out.println("Suppose to print 5");
     System.out.println(fib(5));
+    System.out.println("Suppose to print 55");
+    System.out.println(fib(10));
+    System.out.println("Suppose to print 75025");
     System.out.println(fib(25));
-    System.out.println(fib(50));
-    System.out.println(fib(100));
+    System.out.println("Suppose to print 832040");
+    System.out.println(fib(30));
+    System.out.println("Suppose to print 701408733");
+    System.out.println(fib(44));
+
 
     System.out.println(makeAllSums(3).toString());
   }
