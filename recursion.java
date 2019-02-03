@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 public class recursion{
     /*You may write additional private methods */
 
@@ -22,21 +23,7 @@ public class recursion{
      *precondition: n is non-negative
      */
     public static int fib(int n){
-      /**
-      if (n > 1){
-        return fib(n-1) + fib(n-2);
-      }
-      if (n == 1){
-      return 1;
-    }
-    else{
-      return 0;
-    }
-    **/
-
-      return fibHelper(n,0,1,0);
-
-
+      return fibHelper(n,0,1,2);
     }
 
     public static int fibHelper(int n,int p, int p2,int index){
@@ -48,7 +35,7 @@ public class recursion{
       if (n == 0){
         return 0;
       }
-      if (n != index + 2 ){
+      if (n != index){
         return fibHelper(n,first,second + first,index + 1);
       }
       else{
@@ -57,19 +44,46 @@ public class recursion{
     }
 
     /*As Per classwork*/
-    //public static ArrayList<Integer> makeAllSums(int n){
-      //ArrayList<Integer> ans = new ArrayList<>();
-      //ArrayListHelper(ans,n);
-    //}
-  public static void main(String args[]){
-    System.out.println(sqrt(1,.001));
-    System.out.println(sqrt(4,.00001));
-    System.out.println(sqrt(64,.1));
-    System.out.println(sqrt(1000,.0001));
+    public static ArrayList<Integer> makeAllSums(int n){
+      ArrayList<Integer> ans = new ArrayList<>();
+      ArrayListHelper(ans,0, 1, n);
+      //ArrayListHelper(ans,0, 1, n);
+      return ans;
+    }
 
+    public static boolean ArrayListHelper(ArrayList<Integer> ans, int sum, int current, int n){
+      if (current < n+1){
+        return ArrayListHelper(ans, sum + current, current + 1, n) && ArrayListHelper(ans, sum, current + 1, n);
+      }
+      ans.add(sum);
+      return true;
+    }
+
+  public static void main(String args[]){
+    System.out.println("Square Root Test:");
+    System.out.println("Suppose to print about 1");
+    System.out.println(sqrt(1,.001));
+    System.out.println("Suppose to print about 2");
+    System.out.println(sqrt(4,.00001));
+    System.out.println("Suppose to print about 8");
+    System.out.println(sqrt(64,.1));
+    System.out.println("Suppose to print about 22.36");
+    System.out.println(sqrt(500,.01));
+    System.out.println("Suppose to print about 31.622");
+    System.out.println(sqrt(1000,.0001));
+    System.out.println("Suppose to print about 316.227");
+    System.out.println(sqrt(100000, .00001));
+
+    System.out.println("");
+
+    System.out.println("")
     System.out.println(fib(0));
     System.out.println(fib(1));
     System.out.println(fib(5));
     System.out.println(fib(25));
+    System.out.println(fib(50));
+    System.out.println(fib(100));
+
+    System.out.println(makeAllSums(3).toString());
   }
 }
