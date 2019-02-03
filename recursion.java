@@ -98,7 +98,10 @@ public class recursion{
     System.out.println("Suppose to print 2971215073");
     System.out.println(fib(47));
 
+    System.out.println("");
 
+    System.out.println("makeAllSums Tests:");
+    System.out.println("Suppose to turn [0, 3, 2, 5, 1, 4, 3, 6]");
     System.out.println(makeAllSums(3).toString());
   }
 }
