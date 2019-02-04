@@ -12,6 +12,9 @@ public class recursion{
     }
 
     public static double squareRootHelper(double n, double guess,double tolerance){
+      if (n == 0){
+        return 0;
+      }
       if (guess * guess % n  <= tolerance){
         return guess;
       }
@@ -61,6 +64,8 @@ public class recursion{
 
   public static void main(String args[]){
     System.out.println("Square Root Tests:");
+    System.out.println("Suppose to print about 0");
+    System.out.println(sqrt(0,.001));
     System.out.println("Suppose to print about 1");
     System.out.println(sqrt(1,.001));
     System.out.println("Suppose to print about 2");
